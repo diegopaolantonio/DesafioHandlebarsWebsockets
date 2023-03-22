@@ -1,0 +1,111 @@
+[
+	{
+		"title": "1200",
+		"description": "PLC",
+		"price": 300,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens1500",
+		"stock": 10,
+		"category": "Automatizacion",
+		"status": true,
+		"id": 1
+	},
+	{
+		"title": "1200",
+		"description": "PLC",
+		"price": 300,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens1200",
+		"stock": 10,
+		"category": "Automatizacion",
+		"status": true,
+		"id": 2
+	},
+	{
+		"title": "1200",
+		"description": "PLC",
+		"price": 300,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens1000",
+		"stock": 10,
+		"category": "Automatizacion",
+		"status": false,
+		"id": 3
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens1100",
+		"stock": 256,
+		"category": "Automatizacion",
+		"status": true,
+		"id": 4
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens900",
+		"stock": 256,
+		"category": "salir",
+		"id": 5,
+		"status": true
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens500",
+		"stock": 256,
+		"category": "entrar",
+		"status": true,
+		"id": 6
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens5050",
+		"stock": 256,
+		"category": "entrar",
+		"status": false,
+		"id": 7
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemens550",
+		"stock": 256,
+		"category": "entrar",
+		"status": true,
+		"id": 8
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"thumbnail": "https://http2.mlstatic.com/D_NQ_NP_743675-MLA45035421068_022021-W.jpg",
+		"code": "Siemen550",
+		"stock": 256,
+		"category": "entrar",
+		"id": 9,
+		"status": true
+	},
+	{
+		"title": "1100",
+		"description": "HMI",
+		"price": 1240,
+		"code": "Siemen8550",
+		"stock": 256,
+		"category": "entrar",
+		"status": false,
+		"id": 10
+	}
+]
