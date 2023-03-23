@@ -3,8 +3,8 @@ import handlebars from "express-handlebars";
 import __dirname from "./utils.js";
 import productsRouter from "./routes/products.router.js";
 import cartsRouter from "./routes/carts.router.js";
-import { Server } from "socket.io"
-import viewsRouter from "./routes/views.router.js"
+import { Server } from "socket.io";
+import viewsRouter from "./routes/views.router.js";
 import ProductManager from "./ProductManager.js";
 
 const app = express();
@@ -18,20 +18,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static(`${__dirname}/public`));
 
-app.use("/", viewsRouter)
+app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 
-
-
-
 const httpServer = app.listen(8080, () => {
-    console.log("Server on port 8080");
-  });  
+  console.log("Server on port 8080");
+});
 
-  const io = new Server(httpServer);
+const io = new Server(httpServer);
 
-  //Coneccion con el servidor
+//Coneccion con el servidor
 io.on("connection", async (socket) => {
   console.log("Cliente conectado");
   let products = await productManager.getProducts();

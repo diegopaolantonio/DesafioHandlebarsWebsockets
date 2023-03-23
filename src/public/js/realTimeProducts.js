@@ -1,8 +1,46 @@
 const socket = io();
 
+const deleteBox = document.getElementById("deleteBox");
+const addBox = document.getElementById("addBox");
+
+deleteBox.addEventListener("click", () => {
+    let deleteId = parseInt(document.querySelector("#pid").value);
+
+    socket.emit("deleteProduct", deleteId);
+    document.querySelector("#pid").value = "";
+});
+
+addBox.addEventListener("click", () => {
+    var addProduct = {
+      status: false,
+    };
+
+    let infoTitle = document.querySelector("#title").value,
+    infoDescription = document.querySelector("#description").value,
+    infoPrice = document.querySelector("#price").value,
+    infoCode = document.querySelector("#code").value,
+    infoStock = document.querySelector("#stock").value,
+    infoCategory = document.querySelector("#category").value,
+    infoStatus = document.querySelector("#status").value;
+
+    addProduct.title = infoTitle;
+    addProduct.description = infoDescription;
+    addProduct.price = parseInt(infoPrice);
+    addProduct.code = infoCode;
+    addProduct.stock = parseInt(infoStock);
+    addProduct.category = infoCategory;
+    if(infoStatus === "false") {
+      addProduct.status = false;  
+    } else {
+      addProduct.status = true;
+    }
+
+    socket.emit("addProduct", addProduct);
+    addBox.value = "";
+});
+
 socket.on("getProduct", (data) => {
   realTime.innerHTML = "";
-  console.log("data");
   data.forEach((element) => { 
     realTime.innerHTML += `<tr>
              <p>Id: ${element.id}</p>
@@ -17,5 +55,4 @@ socket.on("getProduct", (data) => {
              </tr><br/>`
   });
 
-  // io.emit("getProduct", data);
 });
