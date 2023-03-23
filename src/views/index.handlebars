@@ -1,18 +1,18 @@
 <div>
   <h1>Desafio de Handlebars</h1>
   <h2>Productos:</h2>
-  <div>
-    {{#each productsArray}}
-  <br/>
-  <p>Id: {{this.id}}</p>
-  <p>Title: {{this.title}}</p>
-  <p>Description: {{this.description}}</p>
-  <p>Price: {{this.price}}</p>
-  <p>Code: {{this.code}}</p>
-  <p>Stock: {{this.stock}}</p>
-  <p>Category: {{this.category}}</p>
-  <p>Status: {{this.status}}</p>
-  <p>Thumbnail: {{this.thumbnail}}</p>
-</div>
-{{/each}}
+  {{#each productsArray}}
+    <div>
+      <br />
+      <p>Id: {{this.id}}</p>
+      <p>Title: {{this.title}}</p>
+      <p>Description: {{this.description}}</p>
+      <p>Price: {{this.price}}</p>
+      <p>Code: {{this.code}}</p>
+      <p>Stock: {{this.stock}}</p>
+      <p>Category: {{this.category}}</p>
+      <p>Status: {{this.status}}</p>
+      <p>Thumbnail: {{this.thumbnail}}</p>
+    </div>
+  {{/each}}
 </div>

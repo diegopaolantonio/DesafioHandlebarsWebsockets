@@ -28,22 +28,25 @@ const httpServer = app.listen(8080, () => {
 
 const io = new Server(httpServer);
 
-//Coneccion con el servidor
+//Conexion con el servidor
 io.on("connection", async (socket) => {
   console.log("Cliente conectado");
   let products = await productManager.getProducts();
   io.emit("getProduct", products);
 
+  // Agregar producto
   socket.on("addProduct", async (product) => {
     products = await productManager.addProduct(product);
     io.emit("addProduct", products);
   });
 
+  // Eliminar producto
   socket.on("deleteProduct", async (pid) => {
     products = await productManager.deleteProduct(parseInt(pid));
     io.emit("deleteProduct", products);
   });
 
+  // Actualizar vista en tiempo real
   socket.on("getProduct", async () => {
     let products = await productManager.getProducts();
     io.emit("getProduct", products);

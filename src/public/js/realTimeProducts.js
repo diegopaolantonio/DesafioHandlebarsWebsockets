@@ -3,6 +3,7 @@ const socket = io();
 const deleteBox = document.getElementById("deleteBox");
 const addBox = document.getElementById("addBox");
 
+// Evento para eliminar producto al pulsar el boton con el id especificado en la casilla
 deleteBox.addEventListener("click", () => {
     let deleteId = parseInt(document.querySelector("#pid").value);
 
@@ -10,6 +11,7 @@ deleteBox.addEventListener("click", () => {
     document.querySelector("#pid").value = "";
 });
 
+// Evento para agregar producto al pulsar el boton con los datos especificados en las casillas
 addBox.addEventListener("click", () => {
     var addProduct = {
       status: false,
@@ -39,6 +41,7 @@ addBox.addEventListener("click", () => {
     addBox.value = "";
 });
 
+// Funcion para imprimir en pantalla los datos del array con los productos
 socket.on("getProduct", (data) => {
   realTime.innerHTML = "";
   data.forEach((element) => { 
